@@ -1,19 +1,37 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import logo from "@/assets/logo.png.webp";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrollUp, setScrollUp] = useState(false);
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolledUp = window.scrollY > 0;
+      setScrollUp(isScrolledUp);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <div className="bg-white px-4 md:px-12 sticky top-0 z-50">
+      <div
+        className={`bg-white px-4 md:px-12 sticky top-0 z-50 ${
+          scrollUp ? "shadow-md" : ""
+        }`}
+      >
         <div className="flex py-4 items-center justify-between">
           <button className="md:hidden lg:hidden" onClick={handleToggle}>
             {isOpen ? (
@@ -53,13 +71,15 @@ export default function Navbar() {
             <Image className="w-[110px]" src={logo} alt="logo" loading="lazy" />
           </div>
 
-          <div className="hidden md:flex items-center space-x-8 text-[#020955]">
+          <div className="hidden md:flex items-center space-x-8">
             <p>Home</p>
             <p>Events</p>
             <p>About</p>
             <p>Blogs</p>
             <p>Contact</p>
-            <button className="bg-[#ffc729] hover:bg-[#e7b220] text-white font-medium px-8 py-2 rounded-full">+91 9078654323</button>
+            <button className="bg-[#ffc729] text-sm text-white font-medium px-6 py-2 rounded-full">
+              +91 9078654323
+            </button>
           </div>
         </div>
 

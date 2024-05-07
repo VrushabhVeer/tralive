@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import girl from "@/assets/traveling-cuate.png";
@@ -25,7 +26,7 @@ const About = () => {
           with the most authentic and exhilarating experiences possible.
         </p>
 
-        <button className="bg-black rounded-full w-fit text-white px-10 py-3 mt-8">
+        <button className="px-10 py-3 bg-black text-white rounded-full font-medium transform hover:-translate-y-1 transition duration-400 mt-8">
           Book Your Destination
         </button>
       </div>

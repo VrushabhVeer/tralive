@@ -25,7 +25,7 @@ export function Hero() {
           curated selection of destinations promises to ignite your passion for
           exploration.
         </div>
-        <button className="bg-black rounded-full w-fit text-white px-10 py-3">
+        <button className="px-10 py-3 bg-black text-white rounded-full font-medium transform hover:-translate-y-1 transition duration-400">
           Explore now
         </button>
       </motion.div>
