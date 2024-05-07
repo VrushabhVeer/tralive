@@ -4,7 +4,7 @@ import girl from "@/assets/traveling-cuate.png";
 
 const About = () => {
   return (
-    <div className="w-11/12 md:w-10/12 mx-auto mt-10 flex items-center justify-between flex-col md:flex-row gap-10 md:gap-20">
+    <div className="w-11/12 md:w-10/12 mx-auto flex items-center justify-between flex-col md:flex-row gap-10 md:gap-20">
       <div className="w-full">
         <Image
           className="w-ull"

@@ -1,6 +1,8 @@
+import Footer from "@/components/common/Footer";
 import About from "@/components/home/About";
 import { Events } from "@/components/home/Events";
 import { Hero } from "@/components/home/Hero";
+import Service from "@/components/home/Service";
 
 export default function Home() {
   return (
@@ -8,6 +10,8 @@ export default function Home() {
       <Hero />
       <Events />
       <About />
+      <Service />
+      <Footer />
     </main>
   );
 }

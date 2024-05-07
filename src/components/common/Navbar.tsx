@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
     <>
       <div className="bg-white px-4 md:px-12 sticky top-0 z-50">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex py-4 items-center justify-between">
           <button className="md:hidden lg:hidden" onClick={handleToggle}>
             {isOpen ? (
               <svg
@@ -53,13 +53,13 @@ export default function Navbar() {
             <Image className="w-[110px]" src={logo} alt="logo" loading="lazy" />
           </div>
 
-          <div className="hidden md:flex space-x-8 text-[#020955]">
+          <div className="hidden md:flex items-center space-x-8 text-[#020955]">
             <p>Home</p>
             <p>Events</p>
             <p>About</p>
             <p>Blogs</p>
             <p>Contact</p>
-            <button></button>
+            <button className="bg-[#ffc729] hover:bg-[#e7b220] text-white font-medium px-8 py-2 rounded-full">+91 9078654323</button>
           </div>
         </div>
 
