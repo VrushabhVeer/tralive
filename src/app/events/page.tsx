@@ -18,7 +18,7 @@ const page = () => {
         <p>Our upcomming india tours</p>
       </div>
 
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-8 gap-10">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-8 gap-6">
         <div className="border rounded-md">
           <div className="relative">
             <Image
@@ -104,7 +104,7 @@ const page = () => {
                 alt="location-icon"
                 loading="lazy"
               />
-              <p>Rajstan</p>
+              <p>Rajasthan</p>
             </div>
           </div>
         </div>
@@ -164,7 +164,7 @@ const page = () => {
                 alt="location-icon"
                 loading="lazy"
               />
-              <p>Rajstan</p>
+              <p>Rajasthan</p>
             </div>
           </div>
         </div>

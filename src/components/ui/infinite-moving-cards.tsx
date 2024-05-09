@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/utils/cn";
+import Image, { StaticImageData } from "next/image";
 import React, { useEffect, useState } from "react";
 
 export const InfiniteMovingCards = ({
@@ -13,6 +14,7 @@ export const InfiniteMovingCards = ({
   items: {
     image: string;
     name: string;
+    flag: StaticImageData;
     date: string;
   }[];
   direction?: "left" | "right";
@@ -99,14 +101,20 @@ export const InfiniteMovingCards = ({
                 aria-hidden="true"
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
               ></div>
-              <img className="w-full rounded-md object-cover h-56 relative z-20" src={item.image} alt="image" loading="lazy" />
+              <img
+                className="w-full rounded-md object-cover h-56 relative z-20"
+                src={item.image}
+                alt="image"
+                loading="lazy"
+              />
               <div className="relative z-20 mt-3 flex flex-row items-center">
                 <span className="flex flex-col gap-1">
-                  <span className=" text-xl font-semibold leading-[1.6]">
-                    {item.name}
+                  <span className="flex items-center gap-3 text-xl font-semibold leading-[1.6]">
+                    <Image className="w-5" src={item.flag} alt="flag" />{" "}
+                    <p>{item.name}</p>
                   </span>
                   <span className=" text-md text-gray-500 leading-[1.6] font-medium">
-                    {item.date}
+                    {item.date} 
                   </span>
                 </span>
               </div>

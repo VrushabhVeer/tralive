@@ -33,8 +33,8 @@ export default function Navbar() {
           scrollUp ? "shadow-md" : ""
         }`}
       >
-        <div className="flex flex-row-reverse md:flex-row py-4 items-center justify-between">
-          <button className="md:hidden lg:hidden" onClick={handleToggle}>
+        <div className="flex flex-row-reverse md:flex-row-reverse lg:flex-row py-4 items-center justify-between">
+          <button className="lg:hidden" onClick={handleToggle}>
             {isOpen ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +79,7 @@ export default function Navbar() {
             </Link>
           </div>
 
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:hidden lg:flex items-center space-x-8">
             <Link href="/">
               <p>Home</p>{" "}
             </Link>
@@ -102,7 +102,7 @@ export default function Navbar() {
         </div>
 
         {isOpen ? (
-          <div className="pb-5 pt-5 md:hidden">
+          <div className="pb-5 pt-5 lg:hidden">
             <div className="flex flex-col space-y-5 ml-2">
               <Link href="/events">
                 <p>Events</p>{" "}

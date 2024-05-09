@@ -21,7 +21,7 @@ const Service = () => {
           Full range of travel service
         </h1>
       </div>
-      <div className="w-full mt-8 flex items-center justify-between flex-col md:flex-row gap-10 md:gap-20">
+      <div className="w-full mt-8 flex items-center justify-between flex-col md:flex-col lg:flex-row gap-10 md:gap-20">
         <div className="w-full">
         {accordionItems.map((item, index) => (
             <Accordion key={index} title={item.title} content={item.content} />
