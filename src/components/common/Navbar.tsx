@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useEffect } from "react";
 import { useState } from "react";
 import logo from "@/assets/logo.png.webp";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +33,7 @@ export default function Navbar() {
           scrollUp ? "shadow-md" : ""
         }`}
       >
-        <div className="flex py-4 items-center justify-between">
+        <div className="flex flex-row-reverse md:flex-row py-4 items-center justify-between">
           <button className="md:hidden lg:hidden" onClick={handleToggle}>
             {isOpen ? (
               <svg
@@ -68,15 +69,32 @@ export default function Navbar() {
           </button>
 
           <div className="font-semibold text-2xl">
-            <Image className="w-[110px]" src={logo} alt="logo" loading="lazy" />
+            <Link href="/">
+              <Image
+                className="w-[110px]"
+                src={logo}
+                alt="logo"
+                loading="lazy"
+              />
+            </Link>
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
-            <p>Home</p>
-            <p>Events</p>
-            <p>About</p>
-            <p>Blogs</p>
-            <p>Contact</p>
+            <Link href="/">
+              <p>Home</p>{" "}
+            </Link>
+            <Link href="events">
+              <p>Events</p>{" "}
+            </Link>
+            <Link href="about">
+              <p>About</p>{" "}
+            </Link>
+            <Link href="">
+              <p>Blogs</p>{" "}
+            </Link>
+            <Link href="/contact">
+              <p>Contact</p>{" "}
+            </Link>
             <button className="bg-[#ffc729] text-sm text-white font-medium px-6 py-2 rounded-full">
               +91 9078654323
             </button>
@@ -86,10 +104,18 @@ export default function Navbar() {
         {isOpen ? (
           <div className="pb-5 pt-5 md:hidden">
             <div className="flex flex-col space-y-5 ml-2">
-              <p>Events</p>
-              <p>About</p>
-              <p>Blogs</p>
-              <p>Contact</p>
+              <Link href="/events">
+                <p>Events</p>{" "}
+              </Link>
+              <Link href="/about">
+                <p>About</p>{" "}
+              </Link>
+              <Link href="">
+                <p>Blogs</p>{" "}
+              </Link>
+              <Link href="contact">
+                <p>Contact</p>{" "}
+              </Link>
               <button></button>
             </div>
           </div>

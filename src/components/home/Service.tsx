@@ -14,7 +14,7 @@ const Service = () => {
   ];
   
   return (
-    <div className="w-11/12 md:w-10/12 mx-auto mt-20 md:mt-40">
+    <div className="w-11/12 md:w-10/12 mx-auto mt-20 md:mt-40 mb-10">
       <div className="text-center">
         <p>FAQ</p>
         <h1 className="text-4xl font-bold mt-1">

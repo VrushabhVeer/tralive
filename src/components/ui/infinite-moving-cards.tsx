@@ -1,6 +1,6 @@
 "use client";
+
 import { cn } from "@/utils/cn";
-import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 export const InfiniteMovingCards = ({
@@ -25,7 +25,7 @@ export const InfiniteMovingCards = ({
 
   useEffect(() => {
     addAnimation();
-  });
+  }, []);
   const [start, setStart] = useState(false);
   function addAnimation() {
     if (containerRef.current && scrollerRef.current) {
@@ -73,7 +73,7 @@ export const InfiniteMovingCards = ({
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20 max-w-7xl overflow-hidden",
+        "scroller relative z-20  w-full overflow-hidden",
         className
       )}
     >
@@ -85,23 +85,27 @@ export const InfiniteMovingCards = ({
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
-        {items.map((item) => (
+        {items.map((item, idx) => (
           <li
-            className="w-[350px] max-w-full relative rounded-lg border  flex-shrink-0 border-slate-200 px-3 py-3 md:w-[450px]"
+            className="w-[350px] max-w-full relative rounded-lg border flex-shrink-0 border-slate-200 px-3 py-3 md:w-[450px]"
+            style={{
+              background:
+                "linear-gradient(180deg, var(--slate-0), var(--slate-50)",
+            }}
             key={item.name}
           >
-            <img
-              className="relative z-20 w-full rounded-md object-cover h-56"
-              src={item.image}
-              alt="image"
-            />
             <blockquote>
-              <div className="relative z-20 mt-4 flex flex-row items-center">
-                <span className="flex flex-col">
-                  <span className="text-xl font-semibold leading-[1.6]">
+              <div
+                aria-hidden="true"
+                className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
+              ></div>
+              <img className="w-full rounded-md object-cover h-56 relative z-20" src={item.image} alt="image" loading="lazy" />
+              <div className="relative z-20 mt-3 flex flex-row items-center">
+                <span className="flex flex-col gap-1">
+                  <span className=" text-xl font-semibold leading-[1.6]">
                     {item.name}
                   </span>
-                  <span className="text-md leading-[1.6] text-gray-500 font-normal">
+                  <span className=" text-md text-gray-500 leading-[1.6] font-medium">
                     {item.date}
                   </span>
                 </span>

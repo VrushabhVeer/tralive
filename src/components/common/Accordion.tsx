@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import Image from "next/image";
+import React, { useState } from "react";
+import plus from "@/assets/plus.png";
 
 interface AccordionProps {
   title: string;
@@ -9,22 +11,21 @@ const Accordion: React.FC<AccordionProps> = ({ title, content }) => {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className="py-2">
+    <div className="py-2 w-full md:w-10/12">
       <h2>
         <button
-          className="flex items-center justify-between w-full text-left py-2"
+          className="flex items-center gap-5 w-full text-left py-3 border-b"
           onClick={() => setExpanded(!expanded)}
           aria-expanded={expanded}
         >
-          <span>{title}</span>
-          <svg className="shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-            <rect y="7" width="16" height="2" rx="1" className={`transform origin-center transition duration-200 ease-out ${expanded ? '!rotate-180' : ''}`} />
-            <rect y="7" width="16" height="2" rx="1" className={`transform origin-center rotate-90 transition duration-200 ease-out ${expanded ? '!rotate-180' : ''}`} />
-          </svg>
+          <Image className="w-4" src={plus} alt="plus" loading="lazy" />
+          <span className="font-medium">{title}</span>
         </button>
       </h2>
       <div
-        className={`grid text-sm text-slate-600 overflow-hidden transition-all duration-300 ease-in-out ${expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}
+        className={`grid text-sm text-slate-600 overflow-hidden transition-all duration-300 ease-in-out ${
+          expanded ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+        }`}
         aria-hidden={!expanded}
       >
         <div className="overflow-hidden">
