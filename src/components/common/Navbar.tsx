@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useEffect } from "react";
 import { useState } from "react";
 import logo from "@/assets/logo.png.webp";
+import phone from "@/assets/phone.png";
 import Link from "next/link";
 
 export default function Navbar() {
@@ -89,13 +90,14 @@ export default function Navbar() {
             <Link href="about">
               <p>About</p>{" "}
             </Link>
-            <Link href="">
+            <Link href="/blogs">
               <p>Blogs</p>{" "}
             </Link>
             <Link href="/contact">
               <p>Contact</p>{" "}
             </Link>
-            <button className="bg-[#ffc729] text-sm text-white font-medium px-6 py-2 rounded-full">
+            <button className="flex items-center gap-2 bg-[#ffc729] text-sm text-white font-semibold px-6 py-2 rounded-full">
+              <Image className="w-4" src={phone} alt="phone" loading="lazy" />{" "}
               +91 9078654323
             </button>
           </div>
@@ -110,13 +112,23 @@ export default function Navbar() {
               <Link href="/about">
                 <p>About</p>{" "}
               </Link>
-              <Link href="">
+              <Link href="/blogs">
                 <p>Blogs</p>{" "}
               </Link>
               <Link href="contact">
                 <p>Contact</p>{" "}
               </Link>
-              <button></button>
+              <div>
+                <button className="flex items-center gap-2 bg-[#ffc729] text-sm text-white font-semibold px-6 py-2 rounded-full">
+                  <Image
+                    className="w-4"
+                    src={phone}
+                    alt="phone"
+                    loading="lazy"
+                  />{" "}
+                  +91 9078654323
+                </button>
+              </div>
             </div>
           </div>
         ) : null}
