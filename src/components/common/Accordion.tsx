@@ -14,7 +14,7 @@ const Accordion: React.FC<AccordionProps> = ({ title, content }) => {
     <div className="py-2 w-full md:w-10/12">
       <h2>
         <button
-          className="flex items-center gap-5 w-full text-left py-3 border-b"
+          className="flex items-center gap-5 w-full text-left py-2 border-b"
           onClick={() => setExpanded(!expanded)}
           aria-expanded={expanded}
         >

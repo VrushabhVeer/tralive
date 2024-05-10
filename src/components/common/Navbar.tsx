@@ -90,9 +90,6 @@ export default function Navbar() {
             <Link href="about">
               <p>About</p>{" "}
             </Link>
-            <Link href="/blogs">
-              <p>Blogs</p>{" "}
-            </Link>
             <Link href="/contact">
               <p>Contact</p>{" "}
             </Link>
@@ -111,9 +108,6 @@ export default function Navbar() {
               </Link>
               <Link href="/about">
                 <p>About</p>{" "}
-              </Link>
-              <Link href="/blogs">
-                <p>Blogs</p>{" "}
               </Link>
               <Link href="contact">
                 <p>Contact</p>{" "}

@@ -154,7 +154,7 @@ const page = () => {
 
           <div className="p-4">
             <div className="flex items-center justify-between">
-              <h2 className="font-semibold text-xl">Jaisalmer</h2>
+              <h2 className="font-semibold text-xl">Jaipur</h2>
               <p className="font-medium">6 days</p>
             </div>
             <div className="flex items-center gap-3 mt-3">
