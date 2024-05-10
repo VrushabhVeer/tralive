@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import { AuroraBackground } from "../ui/aurora-background";
 
-export function Hero() {
+const Hero = () => {
   return (
     <AuroraBackground>
       <motion.div
@@ -32,3 +32,5 @@ export function Hero() {
     </AuroraBackground>
   );
 }
+
+export default Hero;

@@ -1,9 +1,13 @@
 import Image from "next/image";
 import React from "react";
 import newyork from "@/assets/flight-booking-cuate.png";
-import planning from "@/assets/writing.png"
-import explore from "@/assets/traveling.png"
-import trip from "@/assets/sunbed.png"
+import planning from "@/assets/writing.png";
+import explore from "@/assets/traveling.png";
+import trip from "@/assets/sunbed.png";
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "About",
+};
 
 const page = () => {
   return (
@@ -34,13 +38,7 @@ const page = () => {
             best destinations, accommodations, and activities, ensuring that
             every moment of your trip is filled with wonder and delight.
           </p>
-          <p className="mt-2">
-            Whether you are a seasoned globetrotter or embarking on your first
-            voyage, we are here to make your travel dreams a reality. Let us
-            take care of the logistics so you can focus on creating priceless
-            memories that last a lifetime. Join us on a journey of discovery,
-            exploration, and adventure. Your next great escape awaits!
-          </p>
+
           <button className="px-10 py-3 bg-black text-white rounded-full font-medium transform hover:-translate-y-1 transition duration-400 mt-8">
             Book Your Destination
           </button>
@@ -53,25 +51,45 @@ const page = () => {
           <p>Try veriety of benefits servises when using our servises.</p>
         </div>
 
-        <div className="flex items-center justify-between flex-col md:flex-col lg:flex-row gap-8 md:gap-20 mt-8">
+        <div className="flex items-center justify-between flex-col md:flex-col lg:flex-row gap-8 md:gap-10 mt-8">
           <div className="p-6 border rounded-md">
             <div className="flex items-center justify-center">
-              <Image className="w-16" src={planning} alt="planning" loading="lazy" />
+              <Image
+                className="w-16"
+                src={planning}
+                alt="planning"
+                loading="lazy"
+              />
             </div>
 
             <div className="text-center mt-5">
               <h2 className="font-semibold text-xl">Plan a trip</h2>
-              <p className="mt-2">Whether you are a seasoned globetrotter or embarking on your first voyage, we are here to make your travel dreams a reality. Let us take care of the logistics so you can focus on creating priceless memories that last a lifetime. </p>
+              <p className="mt-2">
+                Whether you are a seasoned globetrotter or embarking on your
+                first voyage, we are here to make your travel dreams a reality.
+                Let us take care of the logistics so you can focus on creating
+                priceless memories that last a lifetime.{" "}
+              </p>
             </div>
           </div>
           <div className="p-6 border rounded-md">
             <div className="flex items-center justify-center">
-              <Image className="w-16" src={explore} alt="exploring" loading="lazy" />
+              <Image
+                className="w-16"
+                src={explore}
+                alt="exploring"
+                loading="lazy"
+              />
             </div>
 
             <div className="text-center mt-5">
               <h2 className="font-semibold text-xl">Explore and save</h2>
-              <p className="mt-2">Whether you are a seasoned globetrotter or embarking on your first voyage, we are here to make your travel dreams a reality. Let us take care of the logistics so you can focus on creating priceless memories that last a lifetime. </p>
+              <p className="mt-2">
+                Whether you are a seasoned globetrotter or embarking on your
+                first voyage, we are here to make your travel dreams a reality.
+                Let us take care of the logistics so you can focus on creating
+                priceless memories that last a lifetime.{" "}
+              </p>
             </div>
           </div>
           <div className="p-6 border rounded-md">
@@ -81,7 +99,12 @@ const page = () => {
 
             <div className="text-center mt-5">
               <h2 className="font-semibold text-xl">Enjoy your trip</h2>
-              <p className="mt-2">Whether you are a seasoned globetrotter or embarking on your first voyage, we are here to make your travel dreams a reality. Let us take care of the logistics so you can focus on creating priceless memories that last a lifetime. </p>
+              <p className="mt-2">
+                Whether you are a seasoned globetrotter or embarking on your
+                first voyage, we are here to make your travel dreams a reality.
+                Let us take care of the logistics so you can focus on creating
+                priceless memories that last a lifetime.{" "}
+              </p>
             </div>
           </div>
         </div>

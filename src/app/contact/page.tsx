@@ -5,6 +5,10 @@ import telegram from "@/assets/telegram.png";
 import phone from "@/assets/call.png";
 import address from "@/assets/address.png"
 import email from "@/assets/mail.png"
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Contact",
+};
 
 const page = () => {
   return (

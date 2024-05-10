@@ -9,6 +9,10 @@ import ooty from "@/assets/ooty.jpg";
 import jaisalmer from "@/assets/jaisalmer.jpg";
 import jaipur from "@/assets/jaipur.jpg";
 import location from "@/assets/location.png";
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Latest Events",
+};
 
 const page = () => {
   return (

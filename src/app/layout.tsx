@@ -11,8 +11,16 @@ const font = Barlow({
 });
 
 export const metadata: Metadata = {
-  title: "Tralive - Explore with Ease",
-  description: "Discover, plan, and explore your next adventure effortlessly with Tralive.",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  title: {
+    template: "%s | Tralive",
+    default: "Tralive | Explore the world",
+  },
+  description:
+    "Discover, plan, and explore your next adventure effortlessly with Tralive.",
 };
 
 export default function RootLayout({

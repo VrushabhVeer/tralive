@@ -8,7 +8,7 @@ import europe from "@/assets/european-union.png";
 import australia from "@/assets/australia.png";
 import thailand from "@/assets/thailand.png";
 
-export function Events() {
+const Events = () => {
   return (
     <div className="h-[40rem] rounded-md flex flex-col antialiased bg-white items-center justify-center relative overflow-hidden">
       <div className="text-center mb-8">
@@ -23,6 +23,8 @@ export function Events() {
     </div>
   );
 }
+
+export default Events;
 
 const testimonials = [
   {
