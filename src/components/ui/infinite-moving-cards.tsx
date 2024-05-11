@@ -102,7 +102,7 @@ export const InfiniteMovingCards = ({
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
               ></div>
               <img
-                className="w-full rounded-md object-cover h-56 relative z-20"
+                className="w-full rounded-md object-cover h-60 relative z-20"
                 src={item.image}
                 alt="image"
                 loading="lazy"

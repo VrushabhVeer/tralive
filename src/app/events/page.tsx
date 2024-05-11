@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import darjeeling from "@/assets/darjeeling.jpg";
 import ladakh from "@/assets/ladakh.jpg";
-import hampi from "@/assets/humpi.jpg";
+import hampi from "@/assets/hampi.jpg";
 import konkan from "@/assets/konkan.jpg";
 import tadoba from "@/assets/tadoba.jpg";
 import ooty from "@/assets/ooty.jpg";
@@ -26,7 +26,7 @@ const page = () => {
         <div className="border rounded-md">
           <div className="relative">
             <Image
-              className="w-full object-cover h-56 rounded-md"
+              className="w-full object-cover h-56 rounded-t-md"
               src={darjeeling}
               alt="tour-image"
               loading="lazy"
@@ -56,7 +56,7 @@ const page = () => {
         <div className="border rounded-md">
           <div className="relative">
             <Image
-              className="w-full object-cover h-56 rounded-md"
+              className="w-full object-cover h-56 rounded-t-md"
               src={ladakh}
               alt="tour-image"
               loading="lazy"
@@ -86,7 +86,7 @@ const page = () => {
         <div className="border rounded-md">
           <div className="relative">
             <Image
-              className="w-full object-cover h-56 rounded-md"
+              className="w-full object-cover h-56 rounded-t-md"
               src={jaisalmer}
               alt="tour-image"
               loading="lazy"
@@ -116,7 +116,7 @@ const page = () => {
         <div className="border rounded-md">
           <div className="relative">
             <Image
-              className="w-full object-cover h-56 rounded-md"
+              className="w-full object-cover h-56 rounded-t-md"
               src={tadoba}
               alt="tour-image"
               loading="lazy"
@@ -146,7 +146,7 @@ const page = () => {
         <div className="border rounded-md">
           <div className="relative">
             <Image
-              className="w-full object-cover h-56 rounded-md"
+              className="w-full object-cover h-56 rounded-t-md"
               src={jaipur}
               alt="tour-image"
               loading="lazy"
@@ -176,7 +176,7 @@ const page = () => {
         <div className="border rounded-md">
           <div className="relative">
             <Image
-              className="w-full object-cover h-56 rounded-md"
+              className="w-full object-cover h-56 rounded-t-md"
               src={hampi}
               alt="tour-image"
               loading="lazy"
@@ -206,7 +206,7 @@ const page = () => {
         <div className="border rounded-md">
           <div className="relative">
             <Image
-              className="w-full object-cover h-56 rounded-md"
+              className="w-full object-cover h-56 rounded-t-md"
               src={konkan}
               alt="tour-image"
               loading="lazy"
@@ -218,7 +218,7 @@ const page = () => {
 
           <div className="p-4">
             <div className="flex items-center justify-between">
-              <h2 className="font-semibold text-xl">Konkan</h2>
+              <h2 className="font-semibold text-xl">Ratnagiri</h2>
               <p className="font-medium">6 days</p>
             </div>
             <div className="flex items-center gap-3 mt-3">
@@ -236,7 +236,7 @@ const page = () => {
         <div className="border rounded-md">
           <div className="relative">
             <Image
-              className="w-full object-cover h-56 rounded-md"
+              className="w-full object-cover h-56 rounded-t-md"
               src={ooty}
               alt="tour-image"
               loading="lazy"
