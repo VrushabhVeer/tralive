@@ -58,3 +58,8 @@ We welcome contributions to tralive! If you'd like to contribute, please follow 
     ```sh
     git commit -am 'Add some feature'
     git push origin feature/your-feature-name
+
+## Preview
+![tralive](https://github.com/VrushabhVeer/tralive/assets/99570200/aa6b865b-b746-4a5b-b430-ec427db857b6)
+![tralive1](https://github.com/VrushabhVeer/tralive/assets/99570200/3c75ced2-2ad2-4821-986a-6b7e22b62309)
+![tralive2](https://github.com/VrushabhVeer/tralive/assets/99570200/4c504c2f-0dce-4f8c-b20f-5bf58cbaa9ce)
