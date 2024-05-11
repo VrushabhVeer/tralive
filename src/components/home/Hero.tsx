@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { AuroraBackground } from "../ui/aurora-background";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -25,12 +26,14 @@ const Hero = () => {
           curated selection of destinations promises to ignite your passion for
           exploration.
         </div>
-        <button className="px-10 py-3 bg-black text-white rounded-full font-medium transform hover:-translate-y-1 transition duration-400">
-          Explore now
-        </button>
+        <Link href="/events">
+          <button className="px-10 py-3 bg-black text-white rounded-full font-medium transform hover:-translate-y-1 transition duration-400">
+            Explore now
+          </button>
+        </Link>
       </motion.div>
     </AuroraBackground>
   );
-}
+};
 
 export default Hero;
